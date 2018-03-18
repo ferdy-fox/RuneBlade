@@ -1,0 +1,124 @@
+<html>
+
+<head>
+  <title>::: RUNEBLADE :::</title>
+  <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One|Roboto:500" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One|Montserrat:500|Roboto:500" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Federant" rel="stylesheet">
+
+  <link rel="stylesheet" type="text/css" href="runeblade.css">
+  <script src="./bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="runeblade.js"></script>
+</head>
+
+<body>
+  <div id="title-logo">
+    <div class="glitch main-title" data-text="RUNEBLADE">RUNEBLADE</div>
+
+    <svg viewbox="-250 0 600 20" id="sub-title">
+    <defs>
+      <linearGradient id="gradient" x1="0" x2="0" y1="0" y2="1">
+        <stop offset="5%" stop-color="#ed657e"/>
+        <stop offset="95%" stop-color="#e30000"/>
+      </linearGradient>
+
+      <pattern id="wave" x="0" y="0" width="120" height="30" patternUnits="userSpaceOnUse">
+        <path id="wavePath" d="M-40 9 Q-30 7 -20 9 T0 9 T20 9 T40 9 T60 9 T80 9 T100 9 T120 9 V20 H-40z" mask="url(#mask)" fill="url(#gradient)">
+          <animateTransform
+              attributeName="transform"
+              begin="0s"
+              dur="1.5s"
+              type="translate"
+              from="0,0"
+              to="40,0"
+              repeatCount="indefinite" />
+        </path>
+      </pattern>
+    </defs>
+<text text-anchor="middle" x="50" y="15" font-size="17" fill=#f2bf27>ARTEFACTS ✦ STRATEGIST</text>
+    <text text-anchor="middle" x="50" y="15" font-size="17" fill="url(#wave)"  fill-opacity="0.9">ARTEFACTS ✦ STRATEGIST</text>
+    <text text-anchor="middle" x="50" y="15" font-size="17" fill="url(#gradient)" fill-opacity="0.2">ARTEFACTS ✦ STRATEGIST</text>
+  </svg>
+  </div>
+
+  <form id="UpgradePlannerForm">
+    <div class="div-table">
+      <div class="div-table-row">
+        <div class="div-table-col-label">Total Crystals: </div>
+        <div class="div-table-col-input"><input class="input-editable" value=0 id="CrystalsToSpend" onKeyUp="changeCrystalsToSpend()"></input>
+        </div>
+      </div>
+      <div class="div-table-row">
+        <div class="div-table-col-label">Buying: </div>
+        <div class="div-table-col-input"><input class="input-readonly" value=0 id="CrystalsSpentBuying"></input>
+        </div>
+      </div>
+      <div class="div-table-row">
+        <div class="div-table-col-label">Upgrading: </div>
+        <div class="div-table-col-input"><input class="input-readonly" value=0 id="CrystalsSpentUpgrading"></input>
+        </div>
+      </div>
+      <div class="div-table-row">
+        <div class="div-table-col-label">Remaining: </div>
+        <div class="div-table-col-input"><input class="input-readonly" value=0 id="CrystalsRemaining"></input>
+        </div>
+      </div>
+    </div>
+    <br/>
+    <div class="div-table">
+      <div class="div-table-row">
+        <div class="div-table-col-buttons" style="text-align: center;">
+          <a href="javascript:clearUpgrades();">CLEAR</a> &nbsp;
+          <a href="javascript:transferUpgrades();">TRANSFER</a> &nbsp;
+          <a href="javascript:resetAll();">RESET</a>
+        </div>
+      </div>
+    </div>
+    <br/>
+    <div class="div-table" id="ArtefactTableDiv">
+      <div class="div-table-row">
+        <div class="div-table-col-label column-heading">Artefact</div>
+        <div class="div-table-col-value column-heading">Current LV.</div>
+        <div class="div-table-col-value column-heading">Upgraded LV.</div>
+        <div class="div-table-col-value column-heading">%</div>
+        <div class="div-table-col-value column-heading">Cost</div>
+        <div class="div-table-col-effect column-heading">Effect</div>
+      </div>
+    </div>
+    <br/>
+    <div class="div-table">
+      <div class="div-table-row">
+        <div class="div-table-col-buttons centered-text">
+          <a href="javascript:saveToCookie();">SAVE</a> &nbsp;
+          <a href="javascript:loadFromCookie(1);">LOAD</a>
+        </div>
+      </div>
+    </div>
+    <br/>
+    <div class="div-table">
+      <div class="div-table-row">
+        <div class="div-table-col-textarea">
+          <textarea class="textarea-save" id="SaveDataTextarea"></textarea>
+          <div class="centered-text">
+            <a href="javascript:saveToTextarea();">TEXT EXPORT</a> &nbsp;
+            <a href="javascript:loadFromTextarea(1);">TEXT IMPORT</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br />
+    <div class="div-table">
+      <div class="div-table-row">
+        <div class="div-table-col-textarea">
+          <textarea disabled class="textarea-save" id="DirectLinkTextarea"></textarea>
+          <div class="centered-text">
+            <a href="javascript:linkToTextarea();">GENERATE URL</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+</body>
+
+</html>

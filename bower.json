@@ -1,0 +1,20 @@
+{
+  "name": "RuneBlade",
+  "main": "RuneBlade.js",
+  "authors": [
+    "FERDY-FOX <agnostospenumbra@gmail.com>"
+  ],
+  "description": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.3.1"
+  }
+}

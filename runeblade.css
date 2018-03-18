@@ -1,0 +1,350 @@
+* {
+  /*font-family: 'Montserrat', sans-serif;*/
+  font-family: 'Federant', cursive;
+  color: #afafaf;
+}
+
+body {
+  /*background: -webkit-linear-gradient(top, #272b2f, #000000);*/
+  background-image: url("mainbg.jpg");
+  background-color: #000000;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-attachment: fixed;
+}
+
+#title-logo {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#main-title {
+  margin: 15px;
+}
+
+#sub-title {
+  margin: 10px;
+}
+
+.div-table {
+  display: table;
+  width: auto;
+  border-spacing: 0.5px;
+  /*cellspacing:poor IE support for this*/
+  margin: 0 auto;
+}
+
+.div-table-row {
+  display: table-row;
+  width: auto;
+  clear: both;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.div-table-col-buttons {
+  float: left;
+  /*fix for buggy browsers*/
+  display: table-column;
+  width: 400px;
+  background-color: none;
+}
+
+.div-table-col-label {
+  float: left;
+  /*fix for buggy browsers*/
+  display: table-column;
+  width: 350px;
+  background-color: none;
+}
+
+.div-table-col-value {
+  float: left;
+  /*fix for buggy browsers*/
+  display: table-column;
+  width: 110px;
+  background-color: #;
+  text-align: center;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.div-table-col-input {
+  float: left;
+  /*fix for buggy browsers*/
+  display: table-column;
+  width: 150px;
+}
+
+.div-table-col-effect {
+  float: left;
+  /*fix for buggy browsers*/
+  display: table-column;
+  width: 300px;
+}
+
+.div-table-col-linklist {
+  float: left;
+  /*fix for buggy browsers*/
+  display: table-column;
+  width: 120px;
+}
+
+.div-table-col-textarea {
+  float: left;
+  /*fix for buggy browsers*/
+  display: table-column;
+  width: 600px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.column-heading {
+  font-weight: bold;
+}
+
+.input-editable {
+  width: 100px;
+  text-align: right;
+  background-color: rgba(110, 110, 110, 0.5);
+}
+
+.input-readonly {
+  width: 100px;
+  text-align: right;
+  background-color: rgba(67, 74, 84, 0.5);
+  border: none;
+}
+
+.textarea-save {
+  width: 600px;
+  height: 60px;
+  padding: 5px;
+  background-color: rgba(71, 71, 71, 0.5);
+  border: none;
+}
+
+.centered-text {
+  text-align: center;
+}
+
+a {
+  transition: color .4s;
+  color: #ff5252;
+  text-decoration: none;
+}
+
+a:link, a:visited {
+  color: #d98345;
+}
+
+a:hover {
+  color: #ff5252;
+}
+
+a:active {
+  transition: color .3s;
+  color: #ff5252;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.current-level, .upgraded-level {
+  display: inline;
+  text-align: center;
+  background-color: rgba(110, 110, 110, 0.5);
+  border: none;
+  width: 4em;
+}
+
+.div-table-col-value {
+  width: 8em;
+}
+
+input, textarea {
+  border-radius: 1em;
+}
+
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+textarea {
+  resize: none;
+}
+
+/*################################################
+                    GLITCH
+################################################*/
+
+.glitch {
+  color: white;
+  font-size: 3.8em;
+  position: relative;
+  width: 400px;
+  margin: 0 auto;
+  font-family: Montserrat;
+}
+
+@keyframes noise-anim {
+  0% {
+    clip: rect(77px, 9999px, 35px, 0);
+  }
+  5% {
+    clip: rect(27px, 9999px, 22px, 0);
+  }
+  10% {
+    clip: rect(17px, 9999px, 8px, 0);
+  }
+  15% {
+    clip: rect(70px, 9999px, 70px, 0);
+  }
+  20% {
+    clip: rect(38px, 9999px, 82px, 0);
+  }
+  25% {
+    clip: rect(67px, 9999px, 62px, 0);
+  }
+  30% {
+    clip: rect(27px, 9999px, 24px, 0);
+  }
+  35% {
+    clip: rect(50px, 9999px, 95px, 0);
+  }
+  40% {
+    clip: rect(60px, 9999px, 91px, 0);
+  }
+  45% {
+    clip: rect(58px, 9999px, 6px, 0);
+  }
+  50% {
+    clip: rect(97px, 9999px, 13px, 0);
+  }
+  55% {
+    clip: rect(27px, 9999px, 43px, 0);
+  }
+  60% {
+    clip: rect(15px, 9999px, 22px, 0);
+  }
+  65% {
+    clip: rect(4px, 9999px, 55px, 0);
+  }
+  70% {
+    clip: rect(99px, 9999px, 41px, 0);
+  }
+  75% {
+    clip: rect(88px, 9999px, 72px, 0);
+  }
+  80% {
+    clip: rect(63px, 9999px, 26px, 0);
+  }
+  85% {
+    clip: rect(48px, 9999px, 55px, 0);
+  }
+  90% {
+    clip: rect(78px, 9999px, 93px, 0);
+  }
+  95% {
+    clip: rect(56px, 9999px, 25px, 0);
+  }
+  100% {
+    clip: rect(3px, 9999px, 59px, 0);
+  }
+}
+
+.glitch:after {
+  content: attr(data-text);
+  position: absolute;
+  left: 2px;
+  text-shadow: -1px 0 red;
+  top: 0;
+  color: white;
+  background: #000000;
+  overflow: hidden;
+  clip: rect(0, 900px, 0, 0);
+  animation: noise-anim 2s infinite linear alternate-reverse;
+}
+
+@keyframes noise-anim-2 {
+  0% {
+    clip: rect(70px, 9999px, 93px, 0);
+  }
+  5% {
+    clip: rect(74px, 9999px, 48px, 0);
+  }
+  10% {
+    clip: rect(80px, 9999px, 6px, 0);
+  }
+  15% {
+    clip: rect(11px, 9999px, 62px, 0);
+  }
+  20% {
+    clip: rect(59px, 9999px, 79px, 0);
+  }
+  25% {
+    clip: rect(76px, 9999px, 48px, 0);
+  }
+  30% {
+    clip: rect(90px, 9999px, 11px, 0);
+  }
+  35% {
+    clip: rect(81px, 9999px, 14px, 0);
+  }
+  40% {
+    clip: rect(48px, 9999px, 66px, 0);
+  }
+  45% {
+    clip: rect(79px, 9999px, 86px, 0);
+  }
+  50% {
+    clip: rect(46px, 9999px, 69px, 0);
+  }
+  55% {
+    clip: rect(82px, 9999px, 66px, 0);
+  }
+  60% {
+    clip: rect(82px, 9999px, 99px, 0);
+  }
+  65% {
+    clip: rect(20px, 9999px, 90px, 0);
+  }
+  70% {
+    clip: rect(88px, 9999px, 20px, 0);
+  }
+  75% {
+    clip: rect(88px, 9999px, 37px, 0);
+  }
+  80% {
+    clip: rect(8px, 9999px, 18px, 0);
+  }
+  85% {
+    clip: rect(51px, 9999px, 11px, 0);
+  }
+  90% {
+    clip: rect(33px, 9999px, 93px, 0);
+  }
+  95% {
+    clip: rect(84px, 9999px, 10px, 0);
+  }
+  100% {
+    clip: rect(36px, 9999px, 76px, 0);
+  }
+}
+
+.glitch:before {
+  content: attr(data-text);
+  position: absolute;
+  left: -2px;
+  text-shadow: 1px 0 blue;
+  top: 0;
+  color: white;
+  background: #000000;
+  overflow: hidden;
+  clip: rect(0, 900px, 0, 0);
+  animation: noise-anim-2 3s infinite linear alternate-reverse;
+}
